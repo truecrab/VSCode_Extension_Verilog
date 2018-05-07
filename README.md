@@ -8,11 +8,11 @@ It includes two command, Testbench(generate testbench for verilog module in acti
 
 For example if there is active editor of verilog module, you press ctrl+ shift + p to select command:
 
-![Select command](https://github.com/truecrab/VSCode_Extension_Verilog/images/fig1.png)
+![image](https://github.com/truecrab/VSCode_Extension_Verilog/raw/master/images/fig1.png)
 
 It will generate the testbench in a new terminal.
 
-![Generate testbench](https://github.com/truecrab/VSCode_Extension_Verilog/images/fig2.png)
+![image](https://github.com/truecrab/VSCode_Extension_Verilog/raw/master/images/fig2.png)
 
 
 ## Requirements
@@ -28,7 +28,9 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-It is not known what the issue is.
+* `Install failed`: If you failed to install this extension, you may be update your vscode to version 1.23.
+
+It is not known what the other issues are.
 
 ## Release Notes
 
@@ -45,8 +47,10 @@ It can generate testbench and instance for verilog module.
 2018/05/07
 Fixed README.md.
 
-### 1.1.0
+### 1.0.2
 
+2018/05/07
+Fixed README.md to display figure.
 
 -----------------------------------------------------------------------------------------------------------
 
