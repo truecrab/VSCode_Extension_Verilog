@@ -26,6 +26,10 @@
             }
         ]
     },
+    "icon": "verilog.png",
+    "keywords": [
+        "Verilog", "Testbench", "Instance"
+    ],
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
