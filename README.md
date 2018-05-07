@@ -52,6 +52,11 @@ Fixed README.md.
 2018/05/07
 Fixed README.md to display figure.
 
+### 1.0.3
+
+2018/05/07
+Delete out in .gitignore for upload out folder.
+
 -----------------------------------------------------------------------------------------------------------
 
 ## Other

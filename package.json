@@ -2,7 +2,7 @@
     "name": "verilog-testbench-instance",
     "displayName": "Verilog_Testbench",
     "description": "verilog-testbench-instance",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "Truecrab",
     "engines": {
         "vscode": "^1.23.0"
@@ -20,7 +20,8 @@
             {
                 "command": "extension.instance",
                 "title": "Instance"
-            },{
+            },
+            {
                 "command": "extension.testbench",
                 "title": "Testbench"
             }
@@ -28,7 +29,9 @@
     },
     "icon": "verilog.png",
     "keywords": [
-        "Verilog", "Testbench", "Instance"
+        "Verilog",
+        "Testbench",
+        "Instance"
     ],
     "scripts": {
         "vscode:prepublish": "npm run compile",
