@@ -26,6 +26,7 @@ Usage:
 
 import re
 import sys
+import chardet
 
 def delComment( Text ):
     """ removed comment """
@@ -146,8 +147,11 @@ def formatPara(ParaList) :
 
 def writeTestBench(input_file):
     """ write testbench to file """
-    inFile  = open(input_file)
-    inText  = inFile.read()
+    with open(input_file, 'rb') as f:
+        f_info =  chardet.detect(f.read())
+        f_encoding = f_info['encoding']
+    with open(input_file, encoding=f_encoding) as inFile:
+        inText  = inFile.read()
 
     # removed comment,task,function
     inText = delComment(inText)

@@ -2,7 +2,7 @@
     "name": "verilog-testbench-instance",
     "displayName": "Verilog_Testbench",
     "description": "verilog-testbench-instance",
-    "version": "0.0.2",
+    "version": "0.0.5",
     "publisher": "Truecrab",
     "engines": {
         "vscode": "^1.23.0"

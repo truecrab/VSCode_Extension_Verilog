@@ -57,6 +57,10 @@ Fixed README.md to display figure.
 2018/05/07
 Delete out in .gitignore for upload out folder.
 
+### 1.0.5
+2018/05/08
+Modify the file open operation to fixed decoding problem in China.
+
 -----------------------------------------------------------------------------------------------------------
 
 ## Other
