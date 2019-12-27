@@ -38,7 +38,13 @@ export function activate(context: vscode.ExtensionContext) {
         }
         let ter1 = vscode.window.createTerminal({name:'testbench'});
         ter1.show(true);
-        ter1.sendText(`python ${__dirname}\\vTbgenerator.py ${editor.document.fileName}`);
+        let execCommand = ""
+        if (process.platform === "win32") {
+            execCommand = `python ${__dirname}\\vTbgenerator.py ${editor.document.fileName}`
+        } else {
+            execCommand = `python ${__dirname}/vTbgenerator.py ${editor.document.fileName}`
+        }
+        ter1.sendText(execCommand);
 
         // Display a message box to the user
         vscode.window.showInformationMessage('Generate testbench successfully!');
