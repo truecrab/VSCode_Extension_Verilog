@@ -7,8 +7,7 @@ generated bench file like this:
         fifo_sc #(
             .DATA_WIDTH ( 8 ),
             .ADDR_WIDTH ( 8 )
-        )
-         u_fifo_sc (
+        ) u_fifo_sc (
             .CLK   ( CLK                     ),
             .RST_N ( RST_N                   ),
             .RD_EN ( RD_EN                   ),
@@ -132,7 +131,7 @@ def formatPara(ParaList) :
                              %(i[0].ljust(l1 +1),i[1].ljust(l2 ))
                              for i in p])
         paraDef =  '#(\n' +',\n'.join( ['    .'+ i[0].ljust(l1 +1)
-                    + '( '+ i[1].ljust(l2 )+' )' for i in p])+ ')\n'
+                    + '( '+ i[1].ljust(l2 )+' )' for i in p])+ '\n    )'
     return paraDec,paraDef
 
 def writeTestBench(input_file):

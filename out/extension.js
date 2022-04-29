@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require("vscode");
+const path = require('path');
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 function activate(context) {
@@ -20,7 +21,7 @@ function activate(context) {
         }
         let ter1 = vscode.window.createTerminal({ name: 'instance' });
         ter1.show(true);
-        ter1.sendText(`python ${__dirname}\\vInstance_Gen.py ${editor.document.fileName}`);
+        ter1.sendText(`python `+ path.join(`${__dirname}`,"vInstance_Gen.py")+` ${editor.document.fileName}`);
         // Display a message box to the user
         vscode.window.showInformationMessage('Generate instance successfully!');
     });
@@ -33,7 +34,7 @@ function activate(context) {
         }
         let ter1 = vscode.window.createTerminal({ name: 'testbench' });
         ter1.show(true);
-        ter1.sendText(`python ${__dirname}\\vTbgenerator.py ${editor.document.fileName}`);
+        ter1.sendText(`python `+ path.join(`${__dirname}`,"vTbgenerator.py")+` ${editor.document.fileName}`);
         // Display a message box to the user
         vscode.window.showInformationMessage('Generate testbench successfully!');
     });
