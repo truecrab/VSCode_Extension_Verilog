@@ -7,8 +7,7 @@ generated bench file like this:
         fifo_sc #(
             .DATA_WIDTH ( 8 ),
             .ADDR_WIDTH ( 8 )
-        )
-         u_fifo_sc (
+        ) u_fifo_sc (
             .CLK   ( CLK                     ),
             .RST_N ( RST_N                   ),
             .RD_EN ( RD_EN                   ),
@@ -136,7 +135,7 @@ def formatPara(ParaList) :
                              %(i[0].ljust(l1 +1),i[1].ljust(l2 ))
                              for i in p])
         paraDef =  '#(\n' +',\n'.join( ['    .'+ i[0].ljust(l1 +1)
-                    + '( '+ i[0].ljust(l1 )+' )' for i in p])+ ')\n'
+                    + '( '+ i[0].ljust(l1 )+' )' for i in p])+ '\n    )'
     else:
         l1 = 6
         l2 = 2
@@ -180,7 +179,7 @@ def writeTestBench(input_file):
     timescale = '`timescale  1ns / 1ps\n'
     print("//~ `New testbench")
     print(timescale)
-    print("module tb_%s;\n" % name)
+    print("module %s_tb;\n" % name)
 
     # module_parameter_port_list
     if(paraDec!=''):
