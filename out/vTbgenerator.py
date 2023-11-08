@@ -218,6 +218,13 @@ begin
 end
 '''
     print(operation)
+    vcd = '''
+initial begin
+    $dumpfile("%s.vcd");
+    $dumpvars(0,tb_%s);
+end
+'''%(name,name)
+    print(vcd)
     print("endmodule")
 
 if __name__ == '__main__':
